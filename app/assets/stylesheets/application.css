@@ -13,3 +13,80 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+}
+
+.container {
+  padding-left: 20px;
+}
+
+.card-you {
+  padding: 30px;
+  border-left: 10px solid #e2e2e2;
+}
+
+.card-coach {
+  padding: 30px;
+  background-color: #f7f6d5;
+  border-left: 10px solid #e2e2e2;
+}
+
+.title {
+  color: #3a3a3a;
+}
+
+.you {
+  font-style: italic;
+  font-weight: 300;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1e3096;
+  transition: .3s;
+}
+
+a:hover {
+  color: #3f52c2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+form[type="text"] {
+  width: 20%;
+  padding: 12px 5px;
+}
+
+form[type="submit"] {
+  cursor: pointer;
+  padding: 12px 23px;
+  border: 1px solid #1e3096;
+  border-radius: 5px;
+  color: #1e3096;
+  font-weight: 500;
+  background-color: transparent;
+  transition: .3s;
+  display: inline-block;
+}
+
+form[type="submit"]:hover {
+  background-color: #1e3096;
+  color: white;
+}

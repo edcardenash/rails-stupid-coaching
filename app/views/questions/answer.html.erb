@@ -1,16 +1,24 @@
 
-<h1>Stupid Coaching</h1>
-<h2>Question: <%= @answer %></h2>
-<p>- You</p>
-
-<% if params[:question] == "I am going to work" %>
-  <h2>Great!</h2>
-  <p>- Coach</p>
-<% elsif params[:question].include?("?") %>
-  <h2>Silly question, get dressed and go to work!</h2>
-  <p>- Coach</p>
-<% else %>
-  <h2>I don't care, get dressed and go to work!</h2>
-  <p>- Coach</p>
-<% end %>
-<a href=""> <%= link_to "Ask new question", ask_path %></a>
+<div class="container">
+  <h1 class="title">Stupid Coaching</h1>
+  <br>
+  <div class="card-you">
+    <p><%= @answer %></p>
+    <p class="you">- You</p>
+  </div>
+  <br>
+  <div class="card-coach">
+    <% if params[:question] == "I am going to work" %>
+      <p>Great!</p>
+      <p>- Coach</p>
+    <% elsif params[:question].include?("?") %>
+      <p><strong>Silly question, get dressed and go to work!</strong></p>
+      <p>- Coach</p>
+    <% else %>
+      <p><strong>I don't care, get dressed and go to work!</strong></p>
+      <p class="you">- Your coach</p>
+    <% end %>
+  </div>
+  <br>
+  <a href=""> <%= link_to "Ask new question", ask_path %></a>
+</div>
